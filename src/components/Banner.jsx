@@ -4,16 +4,16 @@ import bannerStackImg from '../assets/banner-stack.png';
 const Banner = () => {
   return (
     <div className="w-full bg-white pt-16 pb-12 lg:pt-24 lg:pb-20" id="home">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 lg:px-8 gap-12">
-        <div className="text-left flex-1 max-w-2xl">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 lg:px-8 gap-12">
+        <div className="text-center md:text-left flex-1 max-w-2xl">
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-[#1a1a2e]">
             Build Your Ideal <br/>
             <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">Development Stack</span>
           </h1>
-          <p className="py-6 text-lg text-gray-500 max-w-lg">
+          <p className="py-6 text-lg text-gray-500 max-w-lg mx-auto md:mx-0">
             Explore frontend, backend, database, and tooling options, compare them side by side, and put together the stack that fits your next project.
           </p>
-          <div className="flex gap-4">
+          <div className="flex justify-center md:justify-start gap-4">
             <button className="bg-gradient-to-r from-orange-500 to-pink-500 text-white border-none rounded-lg px-8 py-3.5 font-semibold text-sm hover:opacity-90 transition-opacity">Explore Technologies</button>
             <button className="bg-white border border-gray-100 shadow-[0_2px_10px_rgb(0,0,0,0.04)] text-gray-600 rounded-lg px-8 py-3.5 font-semibold text-sm hover:bg-gray-50 transition-colors">Learn More</button>
           </div>

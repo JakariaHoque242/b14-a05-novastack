@@ -56,7 +56,7 @@ function App() {
         <Banner />
         
         <div className="max-w-7xl mx-auto px-4 lg:px-8 py-16" id="technologies">
-          <div className="mb-10 text-left">
+          <div className="mb-10 text-center md:text-left">
             <h2 className="text-3xl font-bold mb-2 text-gray-900">
               Explore the <span className="text-[#ec4899]">Technologies</span>
             </h2>

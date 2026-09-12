@@ -23,7 +23,7 @@ const TechCard = ({ tech, onAdd, isAdded }) => {
           <span className="bg-gray-50 text-gray-600 px-3 py-1 rounded-md text-xs font-medium border border-gray-100">
             {tech.category}
           </span>
-          <span className="bg-gray-50 text-gray-600 px-3 py-1 rounded-md text-xs font-medium border border-gray-100 hidden sm:inline-block">
+          <span className="bg-gray-50 text-gray-600 px-3 py-1 rounded-md text-xs font-medium border border-gray-100">
             {tech.difficulty}
           </span>
         </div>
