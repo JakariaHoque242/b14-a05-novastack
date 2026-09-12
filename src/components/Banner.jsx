@@ -4,8 +4,8 @@ import bannerStackImg from '../assets/banner-stack.png';
 const Banner = () => {
   return (
     <div className="hero min-h-[500px] bg-white pt-10" id="home">
-      <div className="hero-content flex-col lg:flex-row w-full max-w-7xl justify-between px-4 lg:px-8 gap-12">
-        <div className="max-w-xl text-left">
+      <div className="hero-content flex-col md:flex-row w-full max-w-7xl justify-between items-center px-4 lg:px-8 gap-8">
+        <div className="text-left flex-1 max-w-2xl">
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-[#1a1a2e]">
             Build Your Ideal <br/>
             <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">Development Stack</span>
@@ -18,11 +18,13 @@ const Banner = () => {
             <button className="bg-white border border-gray-100 shadow-[0_2px_10px_rgb(0,0,0,0.04)] text-gray-600 rounded-lg px-8 py-3.5 font-semibold text-sm hover:bg-gray-50 transition-colors">Learn More</button>
           </div>
         </div>
-        <img 
-          src={bannerStackImg} 
-          className="max-w-sm md:max-w-lg w-full object-contain" 
-          alt="Dev Stack Banner"
-        />
+        <div className="flex-1 flex justify-center md:justify-end w-full">
+          <img 
+            src={bannerStackImg} 
+            className="w-full max-w-sm lg:max-w-lg object-contain" 
+            alt="Dev Stack Banner"
+          />
+        </div>
       </div>
     </div>
   );
