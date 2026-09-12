@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-base-200 mt-20 pt-16 pb-8 border-t border-gray-200">
+    <footer className="bg-white mt-20 pt-16 pb-8 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand Block */}

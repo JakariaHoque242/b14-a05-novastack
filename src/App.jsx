@@ -54,22 +54,24 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
+    <div className="min-h-screen bg-white font-sans">
       <Navbar />
       
       <main>
         <Banner />
         
         <div className="max-w-7xl mx-auto px-4 lg:px-8 py-16" id="technologies">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Trending Technologies</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Explore our curated list of modern development tools. Add them to your stack to plan your next architecture.
+          <div className="mb-10 text-left">
+            <h2 className="text-3xl font-bold mb-2 text-gray-900">
+              Explore the <span className="text-[#ec4899]">Technologies</span>
+            </h2>
+            <p className="text-gray-500 text-sm">
+              Pick one technology per category to build your ideal stack.
             </p>
           </div>
           
-          <div className="flex flex-col lg:flex-row gap-8">
-            <div className="lg:w-2/3">
+          <div className="grid grid-cols-1 xl:grid-cols-4 gap-8">
+            <div className="xl:col-span-3">
               {isLoading ? (
                 <div className="flex justify-center items-center h-64">
                   <span className="loading loading-spinner loading-lg text-primary"></span>
@@ -88,7 +90,7 @@ function App() {
               )}
             </div>
             
-            <div className="lg:w-1/3">
+            <div className="xl:col-span-1">
               <YourStack 
                 stack={stack} 
                 onRemove={handleRemoveFromStack}
