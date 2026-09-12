@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <footer className="bg-white mt-20 pt-16 pb-8 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="flex flex-col sm:flex-row flex-wrap lg:flex-nowrap justify-between gap-10 mb-12">
+        <div className="flex flex-wrap sm:flex-nowrap justify-between gap-8 mb-12">
           {/* Brand Block */}
-          <div className="w-full sm:w-full lg:w-1/3 flex flex-col gap-4">
+          <div className="w-full sm:w-[40%] flex flex-col gap-4">
             <a className="hover:opacity-80 transition-opacity">
               <img src={logoImg} alt="Dev Stack Logo" className="h-8 w-auto object-contain" />
             </a>
@@ -21,35 +21,33 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="flex w-full sm:w-auto justify-between sm:justify-end flex-1 gap-10 sm:gap-16">
-            {/* Product Links */}
-            <div>
-              <h3 className="font-bold text-gray-900 text-xs uppercase tracking-wider mb-4">Product</h3>
-              <ul className="flex flex-col gap-3 text-xs text-gray-500">
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Home</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Technologies</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Projects</a></li>
-              </ul>
-            </div>
-            
-            {/* Company Links */}
-            <div>
-              <h3 className="font-bold text-gray-900 text-xs uppercase tracking-wider mb-4">Company</h3>
-              <ul className="flex flex-col gap-3 text-xs text-gray-500">
-                <li><a href="#" className="hover:text-gray-900 transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Careers</a></li>
-              </ul>
-            </div>
-            
-            {/* Legal Links */}
-            <div>
-              <h3 className="font-bold text-gray-900 text-xs uppercase tracking-wider mb-4">Legal</h3>
-              <ul className="flex flex-col gap-3 text-xs text-gray-500">
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Terms of Service</a></li>
-              </ul>
-            </div>
+          {/* Product Links */}
+          <div className="w-[45%] sm:w-auto">
+            <h3 className="font-bold text-gray-900 text-xs uppercase tracking-wider mb-4">Product</h3>
+            <ul className="flex flex-col gap-3 text-xs text-gray-500">
+              <li><a href="#" className="hover:text-gray-900 transition-colors">Home</a></li>
+              <li><a href="#" className="hover:text-gray-900 transition-colors">Technologies</a></li>
+              <li><a href="#" className="hover:text-gray-900 transition-colors">Projects</a></li>
+            </ul>
+          </div>
+          
+          {/* Company Links */}
+          <div className="w-[45%] sm:w-auto">
+            <h3 className="font-bold text-gray-900 text-xs uppercase tracking-wider mb-4">Company</h3>
+            <ul className="flex flex-col gap-3 text-xs text-gray-500">
+              <li><a href="#" className="hover:text-gray-900 transition-colors">About</a></li>
+              <li><a href="#" className="hover:text-gray-900 transition-colors">Contact</a></li>
+              <li><a href="#" className="hover:text-gray-900 transition-colors">Careers</a></li>
+            </ul>
+          </div>
+          
+          {/* Legal Links */}
+          <div className="w-[45%] sm:w-auto mt-6 sm:mt-0">
+            <h3 className="font-bold text-gray-900 text-xs uppercase tracking-wider mb-4">Legal</h3>
+            <ul className="flex flex-col gap-3 text-xs text-gray-500">
+              <li><a href="#" className="hover:text-gray-900 transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-gray-900 transition-colors">Terms of Service</a></li>
+            </ul>
           </div>
         </div>
         
