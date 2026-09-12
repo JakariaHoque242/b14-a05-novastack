@@ -3,8 +3,8 @@ import bannerStackImg from '../assets/banner-stack.png';
 
 const Banner = () => {
   return (
-    <div className="hero min-h-[500px] bg-white pt-10" id="home">
-      <div className="hero-content flex-col md:flex-row w-full max-w-7xl justify-between items-center px-4 lg:px-8 gap-8">
+    <div className="w-full bg-white pt-16 pb-12 lg:pt-24 lg:pb-20" id="home">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 lg:px-8 gap-12">
         <div className="text-left flex-1 max-w-2xl">
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-[#1a1a2e]">
             Build Your Ideal <br/>
