@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImg from '../assets/logo-text.png';
 
 const Navbar = () => {
   return (
@@ -18,9 +19,8 @@ const Navbar = () => {
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl font-bold flex items-center gap-2">
-          <span className="text-3xl text-gradient">DS</span>
-          <span>Dev Stack</span>
+        <a className="btn btn-ghost hover:bg-transparent">
+          <img src={logoImg} alt="Dev Stack Logo" className="h-8" />
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -33,8 +33,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end flex gap-2">
-        <a className="btn btn-ghost">Sign In</a>
-        <a className="btn bg-gradient-brand text-white border-none rounded-full px-6 hover:opacity-90">Sign Up</a>
+        <a className="font-medium text-sm text-gray-600 hover:text-gray-900 px-4 cursor-pointer">Sign In</a>
+        <a className="bg-gradient-to-r from-pink-500 to-purple-500 text-white border-none rounded-full px-6 py-2.5 text-sm font-medium shadow-sm hover:opacity-90 cursor-pointer transition-opacity">Sign Up</a>
       </div>
     </div>
   );

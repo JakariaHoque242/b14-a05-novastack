@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImg from '../assets/logo-text.png';
 
 const Footer = () => {
   return (
@@ -7,9 +8,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand Block */}
           <div className="flex flex-col gap-4">
-            <a className="text-2xl font-bold flex items-center gap-2">
-              <span className="text-3xl text-gradient">DS</span>
-              <span>Dev Stack</span>
+            <a className="hover:opacity-80 transition-opacity">
+              <img src={logoImg} alt="Dev Stack Logo" className="h-8 w-auto object-contain" />
             </a>
             <p className="text-gray-500 text-sm">
               Empowering developers to build better and faster by providing a curated list of modern development tools and technologies.
