@@ -56,7 +56,7 @@ function App() {
         <Banner />
         
         <div className="max-w-7xl mx-auto px-4 lg:px-8 py-16" id="technologies">
-          <div className="mb-10 text-center md:text-left">
+          <div className="mb-10 text-left">
             <h2 className="text-3xl font-bold mb-2 text-gray-900">
               Explore the <span className="text-[#ec4899]">Technologies</span>
             </h2>
@@ -65,19 +65,19 @@ function App() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 xl:grid-cols-4 gap-8">
-            <div className="xl:col-span-3">
+          <div className="flex flex-row gap-8 overflow-x-auto pb-4">
+            <div className="w-[75%] min-w-[700px]">
               {isLoading ? (
                 <div className="flex justify-center items-center h-64">
                   <span className="loading loading-spinner loading-lg text-primary"></span>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-3 gap-6">
                   {technologies.map(tech => (
                     <TechCard 
                       key={tech.id} 
                       tech={tech} 
-                      onAdd={handleAddToStack}
+                      onAdd={handleAddToStack} 
                       isAdded={stack.some(item => item.id === tech.id)}
                     />
                   ))}
@@ -85,12 +85,8 @@ function App() {
               )}
             </div>
             
-            <div className="xl:col-span-1">
-              <YourStack 
-                stack={stack} 
-                onRemove={handleRemoveFromStack}
-                onRemoveAll={handleRemoveAll}
-              />
+            <div className="w-[25%] min-w-[280px]">
+              <YourStack stack={stack} onRemove={handleRemoveFromStack} onRemoveAll={handleRemoveAll} />
             </div>
           </div>
         </div>
