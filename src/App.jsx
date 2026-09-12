@@ -4,8 +4,6 @@ import Banner from './components/Banner';
 import TechCard from './components/TechCard';
 import YourStack from './components/YourStack';
 import Footer from './components/Footer';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [technologies, setTechnologies] = useState([]);
@@ -20,7 +18,7 @@ function App() {
         const data = await response.json();
         setTechnologies(data);
       } catch (error) {
-        toast.error('Failed to load technologies');
+        console.error('Failed to load technologies', error);
       } finally {
         setTimeout(() => {
           setIsLoading(false);
@@ -35,22 +33,19 @@ function App() {
     const isAlreadyAdded = stack.find(item => item.id === tech.id);
     
     if (isAlreadyAdded) {
-      toast.warn(`${tech.name} is already in your stack!`);
+      alert(`${tech.name} is already in your stack!`);
       return;
     }
     
     setStack([...stack, tech]);
-    toast.success(`${tech.name} added to your stack!`);
   };
 
   const handleRemoveFromStack = (id) => {
     setStack(stack.filter(item => item.id !== id));
-    toast.info(`Technology removed from stack.`);
   };
 
   const handleRemoveAll = () => {
     setStack([]);
-    toast.error('Cleared the entire stack.');
   };
 
   return (
@@ -102,8 +97,6 @@ function App() {
       </main>
 
       <Footer />
-      
-      <ToastContainer position="bottom-right" />
     </div>
   );
 }
