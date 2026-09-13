@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerStackImg from '../assets/banner-stack.png';
+import bannerStackImg from '../assets/simple-server.jpg';
 
 const Banner = () => {
   return (
@@ -21,8 +21,7 @@ const Banner = () => {
         <div className="flex-1 flex justify-end w-full max-w-[40%] sm:max-w-none">
           <img 
             src={bannerStackImg} 
-            className="w-full max-w-[150px] sm:max-w-sm lg:max-w-lg object-contain transition-all duration-500" 
-            style={{ filter: 'sepia(1) hue-rotate(175deg) saturate(4) brightness(1.1)' }}
+            className="w-full max-w-[150px] sm:max-w-sm lg:max-w-lg object-contain mix-blend-multiply" 
             alt="Nova Stack Banner"
           />
         </div>
