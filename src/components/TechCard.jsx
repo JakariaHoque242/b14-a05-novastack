@@ -2,7 +2,7 @@ import React from 'react';
 
 const TechCard = ({ tech, onAdd, isAdded }) => {
   return (
-    <div className={`bg-white rounded-2xl p-5 border ${isAdded ? 'border-pink-500 ring-1 ring-pink-500/20 shadow-md' : 'border-gray-100 shadow-[0_2px_10px_rgb(0,0,0,0.04)] hover:shadow-lg hover:border-pink-500/30'} transition-all flex flex-col h-full`}>
+    <div className={`bg-white rounded-2xl p-5 border ${isAdded ? 'border-blue-500 ring-1 ring-blue-500/20 shadow-md' : 'border-gray-100 shadow-[0_2px_10px_rgb(0,0,0,0.04)] hover:shadow-lg hover:border-blue-500/30'} transition-all flex flex-col h-full`}>
       <div className="flex justify-between items-start mb-4">
         <div className="w-10 h-10 flex items-center justify-center">
           <img src={tech.icon} alt={tech.name} className="w-full h-full object-contain" />
@@ -35,7 +35,7 @@ const TechCard = ({ tech, onAdd, isAdded }) => {
       <button 
         className={`w-full py-2.5 rounded-lg font-medium text-sm transition-all ${
           isAdded 
-            ? 'bg-gradient-to-r from-pink-50 to-purple-50 text-gray-800 border border-gray-200 cursor-not-allowed' 
+            ? 'bg-gradient-to-r from-blue-50 to-sky-50 text-gray-800 border border-blue-200 cursor-not-allowed' 
             : 'bg-[#111827] text-white hover:bg-gray-800'
         }`}
         onClick={() => onAdd(tech)}

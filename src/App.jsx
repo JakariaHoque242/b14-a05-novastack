@@ -4,8 +4,6 @@ import Banner from './components/Banner';
 import TechCard from './components/TechCard';
 import YourStack from './components/YourStack';
 import Footer from './components/Footer';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [technologies, setTechnologies] = useState([]);
@@ -34,22 +32,18 @@ function App() {
     const isAlreadyAdded = stack.find(item => item.id === tech.id);
     
     if (isAlreadyAdded) {
-      toast.warn(`${tech.name} is already in your stack!`);
       return;
     }
     
     setStack([...stack, tech]);
-    toast.success(`${tech.name} added to stack!`);
   };
 
   const handleRemoveFromStack = (id) => {
     setStack(stack.filter(item => item.id !== id));
-    toast.info('Removed from stack.');
   };
 
   const handleRemoveAll = () => {
     setStack([]);
-    toast.error('Stack cleared.');
   };
 
   return (
@@ -62,7 +56,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8 py-16" id="technologies">
           <div className="mb-10 text-left">
             <h2 className="text-3xl font-bold mb-2 text-gray-900">
-              Explore the <span className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Technologies</span>
+              Explore the <span className="bg-gradient-to-r from-blue-800 via-blue-500 to-sky-400 bg-clip-text text-transparent">Technologies</span>
             </h2>
             <p className="text-gray-500 text-sm">
               Pick one technology per category to build your ideal stack.
@@ -73,7 +67,7 @@ function App() {
             <div className="w-[75%] min-w-[700px]">
               {isLoading ? (
                 <div className="flex flex-col justify-center items-center h-64 gap-4">
-                  <span className="loading loading-spinner loading-lg text-pink-500"></span>
+                  <span className="loading loading-spinner loading-lg text-blue-500"></span>
                   <p className="text-lg font-medium text-gray-600">Loading technologies...</p>
                 </div>
               ) : (
@@ -98,7 +92,6 @@ function App() {
       </main>
 
       <Footer />
-      <ToastContainer position="bottom-right" />
     </div>
   );
 }
