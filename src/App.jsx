@@ -4,6 +4,8 @@ import Banner from './components/Banner';
 import TechCard from './components/TechCard';
 import YourStack from './components/YourStack';
 import Footer from './components/Footer';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [technologies, setTechnologies] = useState([]);
@@ -32,18 +34,22 @@ function App() {
     const isAlreadyAdded = stack.find(item => item.id === tech.id);
     
     if (isAlreadyAdded) {
+      toast.warn(`${tech.name} is already in your stack!`);
       return;
     }
     
     setStack([...stack, tech]);
+    toast.success(`${tech.name} added to stack!`);
   };
 
   const handleRemoveFromStack = (id) => {
     setStack(stack.filter(item => item.id !== id));
+    toast.info('Removed from stack.');
   };
 
   const handleRemoveAll = () => {
     setStack([]);
+    toast.error('Stack cleared.');
   };
 
   return (
@@ -63,15 +69,15 @@ function App() {
             </p>
           </div>
           
-          <div className="flex flex-row gap-8 overflow-x-auto pb-4">
-            <div className="w-[75%] min-w-[700px]">
+          <div className="flex flex-col lg:flex-row gap-8">
+            <div className="w-full lg:w-3/4">
               {isLoading ? (
                 <div className="flex flex-col justify-center items-center h-64 gap-4">
                   <span className="loading loading-spinner loading-lg text-blue-500"></span>
                   <p className="text-lg font-medium text-gray-600">Loading technologies...</p>
                 </div>
               ) : (
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {technologies.map(tech => (
                     <TechCard 
                       key={tech.id} 
@@ -84,7 +90,7 @@ function App() {
               )}
             </div>
             
-            <div className="w-[25%] min-w-[280px]">
+            <div className="w-full lg:w-1/4">
               <YourStack stack={stack} onRemove={handleRemoveFromStack} onRemoveAll={handleRemoveAll} />
             </div>
           </div>
@@ -92,6 +98,7 @@ function App() {
       </main>
 
       <Footer />
+      <ToastContainer position="bottom-right" />
     </div>
   );
 }
