@@ -21,7 +21,8 @@ const Banner = () => {
         <div className="flex-1 flex justify-end w-full max-w-[40%] sm:max-w-none">
           <img 
             src={bannerStackImg} 
-            className="w-full max-w-[150px] sm:max-w-sm lg:max-w-lg object-contain mix-blend-multiply" 
+            className="w-full max-w-[150px] sm:max-w-sm lg:max-w-lg object-contain mix-blend-darken" 
+            style={{ filter: 'brightness(1.15) contrast(1.2)' }}
             alt="Nova Stack Banner"
           />
         </div>
