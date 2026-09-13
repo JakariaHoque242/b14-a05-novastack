@@ -1,5 +1,4 @@
 import React from 'react';
-import logoImg from '../assets/logo-text.png';
 
 const Footer = () => {
   return (
@@ -8,8 +7,14 @@ const Footer = () => {
         <div className="flex flex-wrap sm:flex-nowrap justify-between gap-8 mb-12">
           {/* Brand Block */}
           <div className="w-full sm:w-[40%] flex flex-col gap-4">
-            <a className="hover:opacity-80 transition-opacity">
-              <img src={logoImg} alt="Dev Stack Logo" className="h-8 w-auto object-contain" />
+            <a className="flex items-center gap-1.5 hover:opacity-80 transition-opacity cursor-pointer">
+              <div className="bg-gradient-to-br from-blue-800 via-blue-500 to-sky-400 text-white font-bold rounded w-8 h-8 flex items-center justify-center text-sm shadow-sm">
+                DS
+              </div>
+              <span className="text-xl font-bold tracking-tight">
+                <span className="text-gray-900">Dev</span>
+                <span className="bg-gradient-to-r from-blue-800 via-blue-500 to-sky-400 bg-clip-text text-transparent">Stack</span>
+              </span>
             </a>
             <p className="text-gray-500 text-xs leading-relaxed max-w-sm mt-2">
               Curated tools, technologies, and resources for developers building modern software.
