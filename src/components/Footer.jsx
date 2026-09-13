@@ -9,10 +9,10 @@ const Footer = () => {
           <div className="w-full sm:w-[40%] flex flex-col gap-4">
             <a className="flex items-center gap-1.5 hover:opacity-80 transition-opacity cursor-pointer">
               <div className="bg-gradient-to-br from-blue-800 via-blue-500 to-sky-400 text-white font-bold rounded w-8 h-8 flex items-center justify-center text-sm shadow-sm">
-                DS
+                NS
               </div>
               <span className="text-xl font-bold tracking-tight">
-                <span className="text-gray-900">Dev</span>
+                <span className="text-gray-900">Nova</span>
                 <span className="bg-gradient-to-r from-blue-800 via-blue-500 to-sky-400 bg-clip-text text-transparent">Stack</span>
               </span>
             </a>
@@ -58,7 +58,7 @@ const Footer = () => {
         
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400 border-t border-gray-100">
-          <p>© 2026 Dev Stack. All rights reserved.</p>
+          <p>© 2026 NovaStack. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-gray-900 transition-colors">Privacy</a>
             <a href="#" className="hover:text-gray-900 transition-colors">Terms</a>

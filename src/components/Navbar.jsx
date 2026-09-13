@@ -10,7 +10,7 @@ const Navbar = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </div>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-gray-900 font-medium">
+          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-white border border-gray-100 rounded-box w-52 text-gray-900 font-medium">
             <li><a href="#home">Home</a></li>
             <li><a href="#technologies">Technologies</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -22,10 +22,10 @@ const Navbar = () => {
         {/* Desktop Logo */}
         <a className="hidden lg:flex items-center gap-1.5 hover:opacity-80 transition-opacity cursor-pointer">
           <div className="bg-gradient-to-br from-blue-800 via-blue-500 to-sky-400 text-white font-bold rounded w-8 h-8 flex items-center justify-center text-sm shadow-sm">
-            DS
+            NS
           </div>
           <span className="text-xl font-bold tracking-tight">
-            <span className="text-gray-900">Dev</span>
+            <span className="text-gray-900">Nova</span>
             <span className="bg-gradient-to-r from-blue-800 via-blue-500 to-sky-400 bg-clip-text text-transparent">Stack</span>
           </span>
         </a>
@@ -45,10 +45,10 @@ const Navbar = () => {
       <div className="lg:hidden absolute left-1/2 -translate-x-1/2">
         <a className="flex items-center gap-1.5 hover:opacity-80 transition-opacity cursor-pointer">
           <div className="bg-gradient-to-br from-blue-800 via-blue-500 to-sky-400 text-white font-bold rounded w-7 h-7 flex items-center justify-center text-xs shadow-sm">
-            DS
+            NS
           </div>
           <span className="text-lg font-bold tracking-tight">
-            <span className="text-gray-900">Dev</span>
+            <span className="text-gray-900">Nova</span>
             <span className="bg-gradient-to-r from-blue-800 via-blue-500 to-sky-400 bg-clip-text text-transparent">Stack</span>
           </span>
         </a>

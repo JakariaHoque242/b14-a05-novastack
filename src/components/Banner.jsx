@@ -22,8 +22,8 @@ const Banner = () => {
           <img 
             src={bannerStackImg} 
             className="w-full max-w-[150px] sm:max-w-sm lg:max-w-lg object-contain transition-all duration-500" 
-            style={{ filter: 'hue-rotate(-85deg) saturate(1.2)' }}
-            alt="Dev Stack Banner"
+            style={{ filter: 'sepia(1) hue-rotate(175deg) saturate(4) brightness(1.1)' }}
+            alt="Nova Stack Banner"
           />
         </div>
       </div>
