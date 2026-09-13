@@ -21,7 +21,8 @@ const Banner = () => {
         <div className="flex-1 flex justify-end w-full max-w-[40%] sm:max-w-none">
           <img 
             src={bannerStackImg} 
-            className="w-full max-w-[150px] sm:max-w-sm lg:max-w-lg object-contain" 
+            className="w-full max-w-[150px] sm:max-w-sm lg:max-w-lg object-contain transition-all duration-500" 
+            style={{ filter: 'hue-rotate(-85deg) saturate(1.2)' }}
             alt="Dev Stack Banner"
           />
         </div>
